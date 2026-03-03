@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Арша (Juniperus) — қысқаша таныстырылым</title>
+  <meta name="description" content="Арша (Juniperus) туралы: таралуы, биологиялық сипаттамасы, қолданылуы және Қазақстандағы түрлері." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a33;
+      --panel2:#0c1630;
+      --text:#eaf0ff;
+      --muted:#aab7e6;
+      --brand:#6ee7b7;
+      --brand2:#60a5fa;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:26px;
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(96,165,250,.22), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(110,231,183,.18), transparent 60%),
+        linear-gradient(180deg, #070b14 0%, var(--bg) 65%, #070b14 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.60);
+      border-bottom:1px solid var(--line);
+    }
+    .nav .bar{
+      max-width:var(--max); margin:0 auto; padding:12px 24px;
+      display:flex; align-items:center; gap:14px; justify-content:space-between;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px;
+      text-decoration:none;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(110,231,183,.9), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(96,165,250,.9), transparent 55%),
+        linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .menu{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .chip{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:14px;
+      transition:.2s ease;
+    }
+    .chip:hover{transform:translateY(-1px); border-color:rgba(110,231,183,.35); color:var(--text)}
+    .chip.active{border-color:rgba(96,165,250,.55); color:var(--text); background: rgba(96,165,250,.10)}
+
+    /* hero */
+    .hero{
+      margin-top:22px;
+      border-radius:var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background: linear-gradient(135deg, rgba(110,231,183,.10), rgba(96,165,250,.10));
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:0;
+    }
+    .hero .left{padding:28px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .dot{width:8px;height:8px;border-radius:99px;background:var(--brand); box-shadow:0 0 0 6px rgba(110,231,183,.10)}
+    h1{margin:14px 0 10px; font-size:42px; line-height:1.08}
+    .lead{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .hero .stats{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:12px;
+      margin-top:18px;
+    }
+    .stat{
+      padding:12px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(12,22,48,.55);
+    }
+    .stat .n{font-size:18px; font-weight:800}
+    .stat .t{font-size:12px; color:var(--muted)}
+    .hero .right{
+      min-height:340px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.45)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Juniper.jpg?width=1600");
+      background-size:cover;
+      background-position:center;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      padding:18px;
+    }
+    .photo-cap{
+      width:100%;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(7,11,20,.62);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .photo-cap b{color:var(--text)}
+
+    /* layout sections */
+    section{margin-top:22px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    .card{
+      padding:18px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background: rgba(15,26,51,.60);
+      box-shadow: 0 10px 26px rgba(0,0,0,.25);
+    }
+    .card h2{margin:0 0 10px; font-size:20px}
+    .card p{margin:10px 0; color:var(--muted)}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .pill{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .list{
+      margin:10px 0 0; padding:0 0 0 18px; color:var(--muted)
+    }
+    .list li{margin:6px 0}
+
+    /* gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    figure{
+      margin:0;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      grid-column: span 6;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    figure.big{grid-column: span 12}
+    figure img{width:100%; height:320px; object-fit:cover; display:block}
+    figure.big img{height:360px}
+    figcaption{
+      padding:10px 12px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--line);
+      background: rgba(7,11,20,.45);
+    }
+
+    /* accordion */
+    details{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background: rgba(12,22,48,.45);
+      padding:10px 12px;
+      margin-top:10px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--text);
+    }
+    details p{margin:10px 0 0}
+
+    /* footer */
+    footer{
+      margin:26px 0 10px;
+      padding:16px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* responsive */
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      .hero .right{min-height:260px}
+      h1{font-size:34px}
+      .grid{grid-template-columns:1fr}
+      figure{grid-column: span 12}
+      figure img{height:280px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="bar">
+      <a class="brand" href="#top">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Арша (Juniperus)</span>
+      </a>
+
+      <nav class="menu" aria-label="Бөлімдер">
+        <a class="chip" href="#about">Жалпы</a>
+        <a class="chip" href="#spread">Таралуы</a>
+        <a class="chip" href="#bio">Сипаттамасы</a>
+        <a class="chip" href="#kz">Қазақстанда</a>
+        <a class="chip" href="#gallery">Галерея</a>
+        <a class="chip" href="#sources">Дереккөз</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap" id="top">
+    <header class="hero" role="banner">
+      <div class="left">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> мәңгі жасыл қылқанжапырақты өсімдік</div>
+        <h1>Арша — табиғаттың хош иісті, төзімді қазынасы</h1>
+        <p class="lead">
+          Арша (лат. <i>Juniperus</i>) — кипарис тұқымдасына жататын мәңгі жасыл қылқан жапырақты
+          бұталар немесе ағаштар тобы. Кейбір түрлері бұта болып жайыла өссе, кейбірі тік өсіп, ағашқа айналады.
+        </p>
+
+        <div class="stats" aria-label="Қысқа деректер">
+          <div class="stat">
+            <div class="n">Cupressaceae</div>
+            <div class="t">Тұқымдасы: кипаристер</div>
+          </div>
+          <div class="stat">
+            <div class="n">Арктика → субтропик</div>
+            <div class="t">Таралу аймағы кең</div>
+          </div>
+          <div class="stat">
+            <div class="n">300+ жыл</div>
+            <div class="t">Ұзақ өмір сүреді</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right" aria-label="Арша фотосы">
+        <div class="photo-cap">
+          <b>Фото:</b> Арша ағашы (Wikimedia Commons) — сайтқа көрнекілік ретінде қосылды.
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="grid">
+      <article class="card">
+        <h2>1) Арша деген не?</h2>
+        <p>
+          Арша — <b>Juniperus</b> тегіне кіретін мәңгі жасыл қылқанжапырақты өсімдіктер.
+          Олар бұта немесе ағаш түрінде кездеседі, қысы-жазы жасыл түсін сақтайды.
+        </p>
+        <div class="pillrow">
+          <span class="pill">Мәңгі жасыл</span>
+          <span class="pill">Қылқан/қабыршақ жапырақ</span>
+          <span class="pill">Жемісі — жидек тәрізді бүр</span>
+        </div>
+
+        <details>
+          <summary>Қызықты дерек</summary>
+          <p>
+            Кейбір арша түрлерінің жемісі (бүрі) хош иістендіргіш ретінде қолданылатыны айтылады.
+          </p>
+        </details>
+      </article>
+
+      <article class="card">
+        <h2>2) Неге арша маңызды?</h2>
+        <p>
+          Арша табиғатта топырақты бекітуге, жел эрозиясын азайтуға көмектеседі.
+          Сонымен қатар аршаның піскен жемістерін (қаракөк түстілерін) жинап, кептіріп,
+          белгілі уақытқа дейін сақтау тәжірибесі бар.
+        </p>
+        <ul class="list">
+          <li>Төзімді: тасты/құмды, таулы беткейлерде де өсе алады.</li>
+          <li>Хош иісі: кей түрлері хош иістендіргішке пайдаланылған.</li>
+          <li>Шикізат: піскен жемісі жиналып, кептіріледі.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="spread" class="grid">
+      <article class="card">
+        <h2>3) Таралуы</h2>
+        <p>
+          Арша өкілдері Солтүстік жарты шарда <b>Арктикадан</b> бастап <b>субтропиктік таулы аймақтарға</b> дейін кең таралған.
+          Тау беткейінде де, құмды жерлерде де жақсы өседі.
+        </p>
+        <ul class="list">
+          <li>Ортажер теңізі аймағы, Орта Азия</li>
+          <li>Мексика және Солтүстік Американың құрғақ аймақтары</li>
+          <li>Таулы тасты жарлар, орман ярустары</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>4) Биіктігі мен өсу формалары</h2>
+        <p>
+          Өсу тұрғысына қарай арша <b>жайыла өсетін</b> және <b>тік өсетін</b> болып бөлінеді.
+          Табиғаттағы тік өсетін түрлері <b>20–30 м</b>-ге дейін жетуі мүмкін.
+        </p>
+        <details>
+          <summary>Өмір сүру ұзақтығы</summary>
+          <p>
+            Арша ұзақ жасайды: шамамен <b>300 жылға дейін</b>, ал ерекше кәрі үлгілер туралы да деректер кездеседі.
+          </p>
+        </details>
+      </article>
+    </section>
+
+    <section id="bio" class="grid">
+      <article class="card">
+        <h2>5) Биологиялық сипаттамасы</h2>
+        <p>
+          Аршаның бұтақтары тік немесе жерге жайыла өседі. Қылқаны қабыршақты немесе тікенекті болып келеді,
+          кейде үш-үштен шоқтанып, кейде екі-екіден қарама-қарсы орналасады.
+        </p>
+        <p>
+          Жеміс бүрі жидек пішіндес немесе шар тәрізді, көбіне көкшілдеу болады.
+          Шырынды бүрлер (шишкоягода) <b>екі жылда</b> пісіп жетіледі.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>6) Жемісін жинау және кептіру</h2>
+        <p>
+          Піскен жемістер (қаракөк түстілері) әдетте қара күзде жиналып, ашық жерде ептеп кептіріледі.
+          Жинау тәсілдерінің бірі — ағашты сілкіп, түскен жемісті теріп алу, кейін тазалап-сорттап кептіру.
+        </p>
+        <details>
+          <summary>Сақтау</summary>
+          <p>
+            Кептірілген жемісті құрғақ жерде жәшіктерге салып, белгілі уақытқа дейін сақтау тәсілдері айтылады.
+          </p>
+        </details>
+      </article>
+    </section>
+
+    <section id="kz" class="grid">
+      <article class="card">
+        <h2>7) Қазақстанда</h2>
+        <p>
+          Қазақстанда аршаның бірнеше түрі кездесетіні көрсетіледі. Оңтүстік өңірде
+          «Сайрам-Өгем» ұлттық паркінде аршаның бірнеше түрі ұшырасатыны да айтылады.
+        </p>
+        <ul class="list">
+          <li>Зеравшан аршасы</li>
+          <li>Түркістан аршасы</li>
+          <li>Жарты шар тәрізді арша (<i>Juniperus semiglobosa</i>)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>8) Түрлер туралы қысқаша</h2>
+        <p>
+          Уикипедияда Қазақстанда өсетін жабайы түрлер ретінде Түркістан, Талас, Сібір,
+          кәдімгі, Зеравшан аршалары да аталады. Түрлердің нақты морфологиялық айырмашылықтары
+          аймаққа және түрге байланысты өзгеріп отырады.
+        </p>
+        <div class="pillrow">
+          <span class="pill">Талас аршасы</span>
+          <span class="pill">Сібір аршасы</span>
+          <span class="pill">Кәдімгі арша</span>
+          <span class="pill">Зеравшан аршасы</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>9) Галерея</h2>
+      <p style="margin-top:6px">
+        Фотолар Wikimedia Commons арқылы алынды (интернет қажет).
+      </p>
+
+      <div class="gallery" role="list">
+        <figure class="big" role="listitem">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Juniper.jpg?width=1800"
+            alt="Арша ағашы (Juniper) — жалпы көрініс"
+            loading="lazy"
+          />
+          <figcaption>Арша ағашының жалпы көрінісі (Juniper).</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Juniper_berries_777.jpg?width=1400"
+            alt="Арша жемістері (жидек тәрізді бүр)"
+            loading="lazy"
+          />
+          <figcaption>Арша жемістері (жидек тәрізді бүрлер).</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Common_juniper_berries_(Mica_B).JPG?width=1400"
+            alt="Кәдімгі аршаның жидек-бүрлері жақыннан"
+            loading="lazy"
+          />
+          <figcaption>Жидек-бүрлер жақыннан (кәдімгі арша).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer id="sources">
+      <b>Дереккөздер:</b>
+      <ul style="margin:8px 0 0; padding-left:18px">
+        <li>Қазақша мақала: «Арша» (kk.wikipedia) — ғылыми топтастыруы, таралуы, биологиялық сипаттамасы, Қазақстандағы түрлер. </li>
+        <li>Орысша мақала: «Можжевельник» (ru.wikipedia) — Juniperus тегі, таралуы және жалпы анықтама. </li>
+        <li>Көрнекі фотолар: Wikimedia Commons (жоғарыда көрсетілген файлдар).</li>
+      </ul>
+      <div style="margin-top:10px; opacity:.9">
+        Кеңес: Netlify-ға салсаң, осы файлды <b>index.html</b> деп сақтап, zip жасап жүктеу жеткілікті.
+        Фотолар сыртқы сілтеме арқылы ашылады (интернет керек).
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Навигацияда активті бөлімді белгілеу (ұсақ UX)
+    const chips = Array.from(document.querySelectorAll(".chip"));
+    const sections = chips
+      .map(a => document.querySelector(a.getAttribute("href")))
+      .filter(Boolean);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const id = "#" + e.target.id;
+        chips.forEach(c => c.classList.toggle("active", c.getAttribute("href") === id));
+      });
+    }, { rootMargin: "-45% 0px -45% 0px", threshold: 0.01 });
+
+    sections.forEach(s => io.observe(s));
+  </script>
+</body>
+</html>
